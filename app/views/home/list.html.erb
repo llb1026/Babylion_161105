@@ -1,0 +1,12 @@
+<section id="hire">
+    <h1>< Board ></h1>
+    <% @posts.each do |x| %>
+        <h3> Title: <%= x.title %> </h3>
+        <h3> Message: <%= x.content %> </h3>
+        <h3> Time: <%= x.created_at.in_time_zone("Asia/Seoul").strftime("%Y.%m.%d (%H:%M)") %> </h3>
+        <h6> <a href='/update_view/<%= x.id %>' class="btn">Update</a> <a href='/destroy/<%= x.id %>' class="btn">Delete</a> </h6>
+        <br><hr>
+    <% end %>
+    <br><br>
+    <a href="/" class="btn">BACK</a>
+</section>

@@ -1,0 +1,17 @@
+<section id="hire">
+    <h1>< Update ></h1>
+    <form action="/update/<%= @update.id %>" method="POST">
+        <div class="field name-box">
+            <input type="text" name="title" value="<%= @update.title %>"/>
+            <label for="title">Title</label>
+            <span class="ss-icon">check</span>
+        </div>
+        <div class="field msg-box">
+            <textarea name="content" rows="1" /> <%= @update.content %> </textarea>
+            <label for="content">Content</label>
+            <span class="ss-icon">check</span>
+        </div>
+        <br>
+        <input class="button" type="submit" value="Update" />
+    </form>
+</section>
